@@ -1,0 +1,19 @@
+package Execption;
+
+public class Question5 {
+    public static void method1() throws ArithmeticException{
+       int result = 10/0;
+    }
+    public static void method2(){
+        method1();
+    }
+
+    public static void main(String[] args) {
+       try {
+           method2();
+       }
+       catch (ArithmeticException e){
+           System.out.println("Handled exception in main");
+       }
+    }
+}
